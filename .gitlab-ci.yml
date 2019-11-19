@@ -1,0 +1,18 @@
+image: alpine:latest
+
+stages:
+  - deploy
+
+pages:
+  image: cm0x4d/jsdoc
+  stage: deploy
+  script:
+  - mkdir jsdocs
+  - jsdoc public/js/paleocodage.js -d jsdocs
+  - mv jsdocs docs/
+  - cp docs/* public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
