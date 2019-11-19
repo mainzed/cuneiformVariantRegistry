@@ -11,7 +11,7 @@ pages:
 #  - jsdoc docs/js/*.js -d jsdocs
   - mkdir public
   - mv jsdocs docs/
-  - cp docs/* public/
+  - cp -R docs/* public/
   artifacts:
     paths:
     - public
