@@ -9,6 +9,7 @@ pages:
   script:
   - mkdir jsdocs
 #  - jsdoc docs/js/*.js -d jsdocs
+  - mkdir public
   - mv jsdocs docs/
   - cp docs/* public/
   artifacts:
