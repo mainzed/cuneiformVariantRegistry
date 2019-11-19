@@ -8,7 +8,7 @@ pages:
   stage: deploy
   script:
   - mkdir jsdocs
-  - jsdoc public/js/paleocodage.js -d jsdocs
+  - jsdoc docs/js/*.js -d jsdocs
   - mv jsdocs docs/
   - cp docs/* public/
   artifacts:
